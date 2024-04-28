@@ -17,7 +17,6 @@ app.use("/", (req, res) => {
 })
 app.use("/posts", postRoutes);
 
-const CONNECTION_URL = "mongodb+srv://kumarajaymdp700:4MW2qyjyOeIRfbSz@cluster0.7qvsnxy.mongodb.net/SocialMedia?retryWrites=true&w=majority&appName=Cluster0";
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.CONNECTION_URL)
