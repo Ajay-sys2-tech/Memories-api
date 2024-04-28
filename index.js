@@ -12,7 +12,9 @@ app.use(bodyParser.json({limit: '30mb', extended: true}));
 app.use(bodyParser.urlencoded({limit: '30mb', extended: true}));
 app.use(cors());
 
-
+app.use("/", (req, res) => {
+    res.send("Welcome to Memories API");
+})
 app.use("/posts", postRoutes);
 
 const CONNECTION_URL = "mongodb+srv://kumarajaymdp700:4MW2qyjyOeIRfbSz@cluster0.7qvsnxy.mongodb.net/SocialMedia?retryWrites=true&w=majority&appName=Cluster0";
